@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* debugger  */
+/* *{
+  border: 2px solid red;
+} */
+
+/* ------------------------------------ */
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  width: 1.2px;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1d1c20;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #22C55E;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #26272b;
+}
+
+/* ------------------------------------ */
+
+body {
+  background-color: #171719;
+  /* overflow-x: hidden; */
+  /* overflow-y: hidden; */
+}
+
+.active {
+  color: #a4d0f2;
+}
+
+thead {
+  padding-left: 3.75rem;
+}
+
+/* -------------------------------------------- */
+/* PRELOADER  */
+
+#preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999999999999999;
+  width: 100%;
+  height: 100vh;
+  background: #171719;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#preloader svg circle {
+  animation: animation1 2s ease 0s infinite reverse none;
+}
+
+#preloader svg #one {
+  animation: animation1 2s ease 0s infinite normal none;
+}
+
+#preloader svg #two {
+  animation: animation1 2s ease 0s infinite reverse none;
+}
+
+#preloader svg #three {
+  animation: animation1 2s ease 0s infinite normal none;
+}
+
+#preloader svg #four {
+  animation: animation1 2s ease 0s infinite reverse none;
+}
+
+#preloader svg #five {
+  animation: animation1 2s ease 0s infinite normal none;
+}
+
+#preloader svg #six {
+  animation: animation1 2s ease 0s infinite reverse none;
+}
+
+#preloader svg #seven {
+  animation: animation1 2s ease 0s infinite normal none;
+}
+
+#preloader svg #eight {
+  animation: animation1 2s ease 0s infinite reverse none;
+}
+
+@keyframes animation1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+/* span::after {
+  padding-left: 5px;
+} */
+
+/* input[type="date"]:invalid + span::after {
+  content: "✖";
+}
+
+input[type="date"]:valid + span::after {
+  content: "✓";
+} */
+
+
+
+/* --------------------------------------------- */
+
+/* ----------------------------- */
+/* CUSTOM SELECT BOX */
+/* --------------------------- */
+
+.custom-dropdown {
+  position: relative;
+  background-color: #26272b;
+  border-radius: 0.625rem;
+  padding: 0.875rem 1.1875rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+#filter .custom-dropdown {
+  padding-inline: 0.5rem;
+}
+
+/* Custom arrow icon */
+.custom-dropdown::after {
+  content: url("../public/icons/chevron-down.svg");
+  position: absolute;
+  top: 55%;
+  right: 10px;
+  transform: translateY(-50%);
+  /* font-size: 12px; */
+  /* width: 12px; */
+}
+
+.dropdown-options {
+  z-index: 99999;
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 100%;
+  background-color: #3f3f46;
+  border: 1px solid #f4f4f5;
+  border-radius: 0.625rem;
+  border-top: none;
+  display: block;
+  padding: 0.875rem 1.1875rem;
+}
+
+.custom-option {
+  border-bottom: 1px solid #51525c;
+  cursor: pointer;
+}
+
+.custom-option:hover {
+  background-color: #26272b;
+}
+
+/* ---------------------------------------- */
+
+/* PAGINATION */
+
+.paginationBtns {
+  @apply flex justify-between items-center text-sm text-[#A0A0AB] mt-8 bg-[#1D1C20] rounded-[0.625rem] px-6 pt-3 pb-4 border-t border-[#51525C];
+}
+
+.paginationDisabled {
+  @apply bg-[#28282B]/60;
+}
+
+.previousBtn,
+.nextBtn {
+  @apply bg-[#28282B] border border-[#51525C] rounded-lg shadow-sm shadow-[#101828]/[0.05] py-2 px-[0.87rem];
+}
+
+.nextBtn {
+  @apply border border-[#8f8f8f];
+}
+
+.paginationActive {
+  @apply text-white bg-[#454FDA] flex items-center justify-center w-6 h-6 hover:bg-[#454FDA]/80 rounded-[1.25rem];
+}
+
+#scroll-text-group {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+
+  -moz-animation: my-animation 15s linear infinite 1s;
+  -webkit-animation: my-animation 15s linear infinite 1s;
+  animation: my-animation 15s linear infinite 1s;
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+#latest-pools {
+  animation: flowIn 10s ease-in infinite;
+}
+
+@keyframes flowIn {
+  0% {
+    -moz-transform: translateX(2%);
+    -webkit-transform: translateX(2%);
+    transform: translateX(2%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+/* ----------------------------- */
+/* CONNECT BUTTON */
+
