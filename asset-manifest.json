@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/mixerbridge/static/css/main.c7146717.css",
-    "main.js": "/mixerbridge/static/js/main.5dea0a23.js",
+    "main.js": "/mixerbridge/static/js/main.a86bafc7.js",
     "static/js/453.40639fd0.chunk.js": "/mixerbridge/static/js/453.40639fd0.chunk.js",
     "index.html": "/mixerbridge/index.html",
     "static/media/chevron-down.svg": "/mixerbridge/static/media/chevron-down.6e06dfecf8afbad7e3dd.svg",
     "main.c7146717.css.map": "/mixerbridge/static/css/main.c7146717.css.map",
-    "main.5dea0a23.js.map": "/mixerbridge/static/js/main.5dea0a23.js.map",
+    "main.a86bafc7.js.map": "/mixerbridge/static/js/main.a86bafc7.js.map",
     "453.40639fd0.chunk.js.map": "/mixerbridge/static/js/453.40639fd0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7146717.css",
-    "static/js/main.5dea0a23.js"
+    "static/js/main.a86bafc7.js"
   ]
 }
